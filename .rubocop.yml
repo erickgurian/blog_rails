@@ -1,0 +1,24 @@
+Documentation:
+  Enabled: false
+Rails:
+  Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+AllCops:
+  TargetRubyVersion: 2.6
+# Include:
+  #  - '**/Rakefile'
+  #  - '**/Gemfile'
+  #  - '**/config.ru'
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'spec/rails_helper.rb'
+    - 'app/channels/**/*'
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'feature', 'scenario', 'let']
