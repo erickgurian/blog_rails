@@ -26,21 +26,21 @@ body {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: auto;
   width: 100%;
   height: 60px;
-  background-color: #e6faff;
+  background-color: #ED8A41;
 
   .container {
     padding-top: 20px;
   }
 }
 
-.nav-item {
-  margin-right: 25px;
-  margin-top: 10px;
+.navbar {
+  background-color: #ED8A41;
+  height: 60px;
 }
 
-.jumbotron {
-  background-color: #e6faff;
+.navcolor {
+  color: #FFF;
 }

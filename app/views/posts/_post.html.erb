@@ -1,0 +1,17 @@
+<br>
+<br>
+<div class="card" style="width: 38rem;">
+  <div class="card-body">
+    <% if user_signed_in? && post.author?(current_user) %>
+      <p style="margin-left: 500px;"><%= link_to 'Editar', edit_post_path(post) %>
+      <i class="fas fa-edit"></i></p>
+    <% end %>
+    <h4 class="card-title"><b><%= post.title %></b></h4>
+    <br>
+    <h6 class="card-subtitle mb-2 text-muted">Data: <%= post.formated_data %></h6>
+    <br>
+    <p class="card-text" style="font-size: 18px;"><%= post.body %></p>
+    <br>
+    <p>Por: <%= post.user.email %></p>
+  </div>
+</div>

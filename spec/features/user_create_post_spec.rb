@@ -16,6 +16,7 @@ feature 'User create a post' do
     expect(page).to have_content('Post criado com sucesso!')
     expect(page).to have_content('Meu primeiro post')
     expect(page).to have_content('Descrição da primeira postagem')
+    expect(page).to have_content("Por: #{user.email}")
   end
 
   scenario 'and must fill all fields' do

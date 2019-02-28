@@ -1,3 +1,8 @@
+<br>
+<% @post.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
+
 <%= form_with model: post, local: true do |f| %>
 <fieldset>
  <div class="ls-label col-md-8">

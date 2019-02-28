@@ -17,3 +17,7 @@ pt-BR:
   post:
     new:
       submit: 'Postar'
+      success: 'Post criado com sucesso!'
+    edit:
+      submit: 'Editar'
+      success: 'Postagem editada com sucesso!'

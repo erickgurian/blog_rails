@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   before_action :check_user, only: %i[new create]
 
-  def index; end
+  def index
+    @posts = Post.all
+  end
 
   def show
     @post = Post.find(params[:id])
@@ -13,18 +15,32 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
     if @post.save
-      redirect_to @post, notice: 'Post criado com sucesso!'
+      redirect_to @post, notice: t('post.new.success')
     else
       render :new, layout: 'panel'
+    end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+    render layout: 'panel'
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to @post, notice: t('post.edit.success')
+    else
+      render :edit, layout: 'panel'
     end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :user_id)
   end
 
   def check_user

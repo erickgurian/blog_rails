@@ -7,6 +7,8 @@
         null,
         1,
         null,
+        null,
+        1,
         null
       ],
       "/home/erickgurian/workspace/blog_rails/app/models/application_record.rb": [
@@ -21,6 +23,15 @@
       "/home/erickgurian/workspace/blog_rails/app/models/post.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        5,
+        null,
+        null,
+        1,
+        4,
+        null,
         null
       ],
       "/home/erickgurian/workspace/blog_rails/app/controllers/posts_controller.rb": [
@@ -28,9 +39,25 @@
         1,
         null,
         1,
+        11,
+        null,
         null,
         1,
+        4,
+        null,
+        null,
         1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
         null,
         null,
         1,
@@ -50,7 +77,7 @@
         1,
         null,
         1,
-        2,
+        4,
         null,
         null,
         1,
@@ -99,6 +126,6 @@
         0
       ]
     },
-    "timestamp": 1551375877
+    "timestamp": 1551394450
   }
 }
