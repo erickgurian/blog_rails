@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    render layout: 'panel'
   end
 
   def create

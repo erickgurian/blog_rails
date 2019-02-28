@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="ls-theme-orange">
+  <head>
+    <title>Painel do Usuário - GuriDev</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  <div class="ls-topbar ">
+
+    <!-- Barra de Notificações -->
+    <div class="ls-notification-topbar">
+      <!-- Links de apoio -->
+      <!-- <div class="ls-alerts-list">
+        <a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
+        <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
+        <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
+      </div> -->
+
+      <!-- Dropdown com detalhes da conta de usuário -->
+      <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+        <a href="#" class="ls-ico-user">
+          <span class="ls-name" >
+            <% if user_signed_in? %>
+              <%= "Olá, #{current_user.email}" %>
+            <% end %>
+          </span>
+        </a>
+
+        <nav class="ls-dropdown-nav ls-user-menu">
+          <ul>
+            <li><%= link_to 'Sair', destroy_user_session_path, method: 'DELETE' %></li>
+           </ul>
+        </nav>
+      </div>
+    </div>
+
+    <span class="ls-show-sidebar ls-ico-menu"></span>
+    <!-- Nome do produto/marca com sidebar -->
+    <h1 class="ls-brand-name" id='header_title'>
+      <a href="/users" class="ls-ico-code">
+        <small><strong>Painel do Usuário</strong></small>
+        GuriDev
+      </a>
+    </h1>
+
+    <!-- Nome do produto/marca sem sidebar quando for o pre-painel  -->
+  </div>
+  <aside class="ls-sidebar">
+    <div class="ls-sidebar-inner">
+        <nav class="ls-menu" id='side_menu'>
+          <ul>
+            <li><%= link_to 'Nova Postagem', new_post_path, class: 'ls-submenu-item ls-ico-plus' %></li>
+          </ul>
+        </nav>
+    </div>
+  </aside>
+  <main class="ls-main ">
+    <div class="container-fluid">
+      <% flash.each do |name, msg| %>
+        <div class="ls-alert-<%= name %>"><%= msg %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </main>
+
+  <aside class="ls-notification">
+    <nav class="ls-notification-list" id="ls-notification-curtain" style="left: 1716px;">
+      <h3 class="ls-title-2"><%=  %></h3>
+      <ul>
+
+      </ul>
+    </nav>
+
+    <nav class="ls-notification-list" id="ls-help-curtain" style="left: 1756px;">
+      <h3 class="ls-title-2"><%= %></h3>
+      <ul>
+
+      </ul>
+    </nav>
+
+    <nav class="ls-notification-list" id="ls-feedback-curtain" style="left: 1796px;">
+      <h3 class="ls-title-2"><%= 'help' %></h3>
+      <ul>
+        <li class="ls-txt-center hidden-xs">
+          <a href="#" class="ls-btn-dark ls-btn-tour"><%= 'tour' %></a>
+        </li>
+        <li><a href="#"><%= 'guide' %></a></li>
+        <li><a href="#"><%= 'wiki' %></a></li>
+      </ul>
+    </nav>
+  </aside>
+  </body>
+</html>

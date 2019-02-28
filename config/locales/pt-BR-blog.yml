@@ -1,0 +1,19 @@
+pt-BR:
+  activerecord:
+    models:
+      post: 'Postagem'
+      user: 'Usuário'
+    attributes:
+      user:
+        password: 'Senha'
+        password_confirmation: 'Confirmar senha'
+        current_password: 'Senha atual'
+      post:
+        title: 'Título'
+        body: 'Postagem'
+  user:
+    session:
+      submit: 'Entrar'
+  post:
+    new:
+      submit: 'Postar'

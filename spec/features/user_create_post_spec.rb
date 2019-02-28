@@ -3,7 +3,8 @@ require 'rails_helper'
 feature 'User create a post' do
   scenario 'Successfully' do
     visit root_path
-    click_on 'Nova postagem'
+    click_on 'Painel do Usuário'
+    click_on 'Nova Postagem'
     fill_in 'Título', with: 'Meu primeiro post'
     fill_in 'Postagem', with: 'Descrição da primeira postagem'
     click_on 'Postar'
@@ -16,7 +17,8 @@ feature 'User create a post' do
 
   scenario 'and must fill all fields' do
     visit root_path
-    click_on 'Nova postagem'
+    click_on 'Painel do Usuário'
+    click_on 'Nova Postagem'
     fill_in 'Título', with: ''
     fill_in 'Postagem', with: ''
     click_on 'Postar'

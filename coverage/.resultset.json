@@ -1,22 +1,30 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/erickgurian/workspace/blog/app/helpers/application_helper.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/erickgurian/workspace/blog_rails/app/models/application_record.rb": [
+        1,
         1,
         null
       ],
-      "/home/erickgurian/workspace/blog/app/models/post.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/erickgurian/workspace/blog_rails/app/models/post.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/erickgurian/workspace/blog/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/erickgurian/workspace/blog/app/controllers/posts_controller.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/controllers/posts_controller.rb": [
         1,
         1,
         null,
@@ -44,33 +52,40 @@
         null,
         null
       ],
-      "/home/erickgurian/workspace/blog/app/controllers/application_controller.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/controllers/application_controller.rb": [
         1,
         null
       ],
-      "/home/erickgurian/workspace/blog/app/mailers/application_mailer.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/home/erickgurian/workspace/blog_rails/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/erickgurian/workspace/blog/app/channels/application_cable/channel.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/erickgurian/workspace/blog/app/channels/application_cable/connection.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/erickgurian/workspace/blog/app/jobs/application_job.rb": [
+      "/home/erickgurian/workspace/blog_rails/app/jobs/application_job.rb": [
         0,
         0
       ]
     },
-    "timestamp": 1551321456
+    "timestamp": 1551326834
   }
 }
