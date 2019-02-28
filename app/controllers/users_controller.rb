@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   layout 'panel'
   before_action :check_user
 
-  def index; end
+  def index
+    @posts = Post.where('user_id = ?', current_user.id)
+  end
 
   private
 

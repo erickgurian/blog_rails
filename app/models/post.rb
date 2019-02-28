@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   validates :title, :body, presence: true
 
   def formated_data
-    created_at.strftime("%d/%m/%Y")
+    created_at.strftime('%d/%m/%Y')
   end
 
   def author?(current_user)

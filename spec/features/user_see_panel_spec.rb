@@ -33,4 +33,29 @@ feature 'User see user panel' do
 
     expect(current_path).to eq root_path
   end
+
+  scenario 'and view all your posts' do
+    user = create(:user)
+    post = create(:post, user: user)
+    other_post = create(:post, user: user)
+    login_as user
+
+    visit users_path
+
+    expect(page).to have_content('Suas postagens')
+    expect(page).to have_content(post.title)
+    expect(page).to have_content(other_post.title)
+  end
+
+  scenario 'and cant see other user posts' do
+    user = create(:user)
+    author = create(:user, email: 'author@teste.com')
+    post = create(:post, user: author)
+    login_as user
+
+    visit users_path
+
+    expect(page).to have_content('Você não possui postagens')
+    expect(page).not_to have_content(post.title)
+  end
 end

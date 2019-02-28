@@ -32,4 +32,26 @@ feature 'User edit post' do
     expect(page).to have_content('Título não pode ficar em branco')
     expect(page).to have_content('Postagem não pode ficar em branco')
   end
+
+  scenario 'only author can edit a post' do
+    user = create(:user)
+    author = create(:user, email: 'author@test.com')
+    create(:post, user: author)
+    login_as user
+
+    visit root_path
+
+    expect(page).not_to have_content('Editar')
+  end
+
+  scenario 'only author can edit a post - forced' do
+    user = create(:user)
+    author = create(:user, email: 'author@test.com')
+    post = create(:post, user: author)
+    login_as user
+
+    visit edit_post_path(post)
+
+    expect(current_path).to eq root_path
+  end
 end

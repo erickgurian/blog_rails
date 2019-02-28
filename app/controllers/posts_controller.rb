@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
-  before_action :check_user, only: %i[new create]
+  before_action :check_user, only: %i[new create edit update]
+  before_action :set_post, only: %i[show edit update]
+  before_action :check_author, only: %i[edit update]
 
   def index
     @posts = Post.all
   end
 
-  def show
-    @post = Post.find(params[:id])
-  end
+  def show; end
 
   def new
     @post = Post.new
@@ -24,12 +24,10 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
     render layout: 'panel'
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to @post, notice: t('post.edit.success')
     else
@@ -39,11 +37,19 @@ class PostsController < ApplicationController
 
   private
 
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
   def post_params
     params.require(:post).permit(:title, :body, :user_id)
   end
 
   def check_user
     redirect_to root_path unless user_signed_in?
+  end
+
+  def check_author
+    redirect_to root_path unless @post.author?(current_user)
   end
 end
