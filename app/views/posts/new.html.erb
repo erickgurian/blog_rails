@@ -1,20 +1,9 @@
+<br>
 <% @post.errors.full_messages.each do |message| %>
-  <%= message %>
+  <p><%= message %></p>
 <% end %>
 <br>
+<h1>Nova Postagem</h1>
 <br>
 
-<%= form_with model: @post, local: true do |f| %>
-<fieldset>
- <div class="ls-label col-md-8">
-  <%= f.label :title, class: "ls-label-text" %>
-  <%= f.text_field :title, class: 'form-control col-md-10' %>
-</div>
-<div class="ls-label col-md-10">
-  <%= f.label :body, class: "ls-label-text" %>
-  <%= f.text_area :body, rows: "20", class: "ls-textarea-autoresize" %>
-</div>
-  <div class="ls-actions-btn">
-  <%= f.submit t('post.new.submit'), class: 'ls-btn ls-btn-lg' %>
-</div>
-<% end %>
+<%= render partial: 'form', locals: { post: @post, botao: t('post.new.submit') } %>

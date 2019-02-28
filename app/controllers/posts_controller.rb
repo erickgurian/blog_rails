@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :check_user, only: %i[new create]
+
   def index; end
 
   def show
@@ -15,7 +17,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: 'Post criado com sucesso!'
     else
-      render :new
+      render :new, layout: 'panel'
     end
   end
 
@@ -23,5 +25,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+
+  def check_user
+    redirect_to root_path unless user_signed_in?
   end
 end

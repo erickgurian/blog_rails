@@ -1,4 +1,3 @@
 class Post < ApplicationRecord
-  validates :title, :body,
-            presence: { message: 'Todos os campos são obrigatórios' }
+  validates :title, :body, presence: true
 end

@@ -2,6 +2,9 @@ require 'rails_helper'
 
 feature 'User create a post' do
   scenario 'Successfully' do
+    user = create(:user)
+    login_as user
+
     visit root_path
     click_on 'Painel do Usuário'
     click_on 'Nova Postagem'
@@ -16,6 +19,9 @@ feature 'User create a post' do
   end
 
   scenario 'and must fill all fields' do
+    user = create(:user)
+    login_as user
+
     visit root_path
     click_on 'Painel do Usuário'
     click_on 'Nova Postagem'
@@ -23,6 +29,19 @@ feature 'User create a post' do
     fill_in 'Postagem', with: ''
     click_on 'Postar'
 
-    expect(page).to have_content('Todos os campos são obrigatórios')
+    expect(page).to have_content('Título não pode ficar em branco')
+    expect(page).to have_content('Postagem não pode ficar em branco')
+  end
+
+  scenario 'and only authenticate user can create a post' do
+    visit root_path
+
+    expect(page).not_to have_content('Painel do Usuário')
+  end
+
+  scenario 'and only authenticate user can create a post - forced' do
+    visit new_post_path
+
+    expect(current_path).to eq root_path
   end
 end
