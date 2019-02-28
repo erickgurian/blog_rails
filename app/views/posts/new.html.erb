@@ -1,0 +1,11 @@
+<% @post.errors.full_messages.each do |message| %>
+  <%= message %>
+<% end %>
+
+<%= form_with model: @post, local: true do |f| %>
+  <%= f.label :title, 'Título' %>
+  <%= f.text_field :title %>
+  <%= f.label :body, 'Postagem' %>
+  <%= f.text_area :body %>
+  <%= f.submit 'Postar' %>
+<% end %>
