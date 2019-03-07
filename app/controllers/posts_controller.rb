@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  before_action :check_user, only: %i[new create edit update]
-  before_action :set_post, only: %i[show edit update]
-  before_action :check_author, only: %i[edit update]
+  before_action :check_user, only: %i[new create edit update destroy]
+  before_action :set_post, only: %i[show edit update destroy]
+  before_action :check_author, only: %i[edit update destroy]
 
   def index
     @posts = Post.all
@@ -33,6 +33,11 @@ class PostsController < ApplicationController
     else
       render :edit, layout: 'panel'
     end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to root_path
   end
 
   private

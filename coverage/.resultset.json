@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/erickgurian/workspace/blog_rails/app/models/user.rb": [
+      "/home/erick/workspace/blog_rails/app/models/user.rb": [
         1,
         null,
         null,
@@ -11,38 +11,38 @@
         1,
         null
       ],
-      "/home/erickgurian/workspace/blog_rails/app/models/application_record.rb": [
+      "/home/erick/workspace/blog_rails/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/erickgurian/workspace/blog_rails/app/helpers/application_helper.rb": [
+      "/home/erick/workspace/blog_rails/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/erickgurian/workspace/blog_rails/app/models/post.rb": [
+      "/home/erick/workspace/blog_rails/app/models/post.rb": [
         1,
         1,
         1,
         null,
         1,
-        9,
+        10,
         null,
-        null,
-        1,
-        11,
-        null,
-        null
-      ],
-      "/home/erickgurian/workspace/blog_rails/app/controllers/posts_controller.rb": [
-        1,
-        1,
-        1,
-        1,
         null,
         1,
         13,
         null,
+        null
+      ],
+      "/home/erick/workspace/blog_rails/app/controllers/posts_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        15,
+        null,
         null,
         1,
         null,
@@ -73,9 +73,14 @@
         null,
         null,
         1,
+        1,
+        1,
+        null,
         null,
         1,
-        9,
+        null,
+        1,
+        10,
         null,
         null,
         1,
@@ -83,19 +88,19 @@
         null,
         null,
         1,
-        10,
+        11,
         null,
         null,
         1,
-        5,
+        6,
         null,
         null
       ],
-      "/home/erickgurian/workspace/blog_rails/app/controllers/application_controller.rb": [
+      "/home/erick/workspace/blog_rails/app/controllers/application_controller.rb": [
         1,
         null
       ],
-      "/home/erickgurian/workspace/blog_rails/app/controllers/users_controller.rb": [
+      "/home/erick/workspace/blog_rails/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -111,29 +116,29 @@
         null,
         null
       ],
-      "/home/erickgurian/workspace/blog_rails/app/mailers/application_mailer.rb": [
+      "/home/erick/workspace/blog_rails/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/home/erick/workspace/blog_rails/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/erickgurian/workspace/blog_rails/app/channels/application_cable/channel.rb": [
+      "/home/erick/workspace/blog_rails/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/erickgurian/workspace/blog_rails/app/channels/application_cable/connection.rb": [
+      "/home/erick/workspace/blog_rails/app/channels/application_cable/channel.rb": [
         0,
         0,
-        0,
-        0
-      ],
-      "/home/erickgurian/workspace/blog_rails/app/jobs/application_job.rb": [
         0,
         0
       ]
     },
-    "timestamp": 1551396681
+    "timestamp": 1551917787
   }
 }
