@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_red.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-09T15:25:52-03:00">2019-03-09T15:25:52-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-09T16:29:02-03:00">2019-03-09T16:29:02-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">79.71%</span></span>
+    (<span class="covered_percent"><span class="yellow">80.56%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.18
+         2.19
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>11</b> files in total.
-    <b>69</b> relevant lines. 
-    <span class="green"><b>55</b> lines covered</span> and
+    <b>72</b> relevant lines. 
+    <span class="green"><b>58</b> lines covered</span> and
     <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#2f202412210abc3d6e39125618b7c182ebbd0e89" class="src_link" title="app/controllers/posts_controller.rb">app/controllers/posts_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>60</td>
-        <td>33</td>
-        <td>33</td>
+        <td>65</td>
+        <td>36</td>
+        <td>36</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -147,7 +147,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>5.0</td>
+        <td>5.4</td>
       </tr>
       
       <tr>
@@ -173,15 +173,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.6
+         2.53
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>3</b> files in total.
-    <b>42</b> relevant lines. 
-    <span class="green"><b>42</b> lines covered</span> and
+    <b>45</b> relevant lines. 
+    <span class="green"><b>45</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -211,11 +211,11 @@
       <tr>
         <td class="strong"><a href="#2f202412210abc3d6e39125618b7c182ebbd0e89" class="src_link" title="app/controllers/posts_controller.rb">app/controllers/posts_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>60</td>
-        <td>33</td>
-        <td>33</td>
+        <td>65</td>
+        <td>36</td>
+        <td>36</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -240,7 +240,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.33
+         3.57
        </span>
     </span> hits/line)
   </h2>
@@ -282,7 +282,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>5.0</td>
+        <td>5.4</td>
       </tr>
       
       <tr>
@@ -667,8 +667,8 @@
     <h3>app/controllers/posts_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>33</b> relevant lines. 
-      <span class="green"><b>33</b> lines covered</span> and
+      <b>36</b> relevant lines. 
+      <span class="green"><b>36</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -712,8 +712,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="7">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="7">
+          <span class="hits">19</span>
           
           <code class="ruby">    @posts = Post.all</code>
         </li>
@@ -931,106 +931,136 @@
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def search</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="2" data-linenumber="44">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    @param = params[:search]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="45">
+          <span class="hits">2</span>
           
-          <code class="ruby">  def set_post</code>
+          <code class="ruby">    @posts = Post.where(&#39;title like ?&#39;, &quot;%#{@param}%&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="46">
-          <span class="hits">13</span>
+        <li class="never" data-hits="" data-linenumber="46">
           
-          <code class="ruby">    @post = Post.find(params[:id])</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
-          <code class="ruby">  def post_params</code>
+          <code class="ruby">  def set_post</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="50">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="13" data-linenumber="51">
+          <span class="hits">13</span>
           
-          <code class="ruby">    params.require(:post).permit(:title, :body, :user_id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @post = Post.find(params[:id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">  def check_user</code>
+          <code class="ruby">  def post_params</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="54">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="4" data-linenumber="55">
+          <span class="hits">4</span>
           
-          <code class="ruby">    redirect_to root_path unless user_signed_in?</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    params.require(:post).permit(:title, :body, :user_id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
-          <code class="ruby">  def check_author</code>
+          <code class="ruby">  def check_user</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="58">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="59">
+          <span class="hits">13</span>
           
-          <code class="ruby">    redirect_to root_path unless @post.author?(current_user)</code>
+          <code class="ruby">    redirect_to root_path unless user_signed_in?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def check_author</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="63">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    redirect_to root_path unless @post.author?(current_user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">end</code>
@@ -1330,8 +1360,8 @@
           <code class="ruby">  def formated_data</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="6">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="17" data-linenumber="6">
+          <span class="hits">17</span>
           
           <code class="ruby">    created_at.strftime(&#39;%d/%m/%Y&#39;)</code>
         </li>

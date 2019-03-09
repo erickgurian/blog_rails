@@ -40,6 +40,11 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @param = params[:search]
+    @posts = Post.where('title like ?', "%#{@param}%")
+  end
+
   private
 
   def set_post

@@ -1,0 +1,13 @@
+<br>
+<% if @posts.any? %>
+  <h3><%= @posts.length %> resultado(s) encontrado(s)!</h3>
+  <br>
+  <ul>
+    <% @posts.each do |post| %>
+      <li><%= link_to post.title, post %></li>
+      <br>
+    <% end %>
+  <ul>
+<% else %>
+  <h3>Nenhum resultado encontrado :(</h3>
+<% end %>
