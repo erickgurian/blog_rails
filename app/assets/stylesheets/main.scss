@@ -38,11 +38,14 @@ footer {
 
 .navbar {
   background-color: #ED8A41;
-  height: 60px;
 }
 
 .navcolor {
   color: #FFF;
+}
+
+.nav-item {
+  margin-left: 20px;
 }
 
 .dev-size {
@@ -53,10 +56,14 @@ footer {
 
 pre {
     height: auto;
-    max-height: 200px;
-    overflow: auto;
+    overflow: hidden;
     word-break: normal;
     word-wrap: break-word;
     white-space: pre-wrap;
-    font-family: Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.nounderline {
+  text-decoration:none;
 }

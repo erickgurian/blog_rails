@@ -9,4 +9,12 @@ class Post < ApplicationRecord
   def author?(current_user)
     user == current_user
   end
+
+  def read_more?
+    body.size >= 320
+  end
+
+  def initial_body
+    read_more? ? body.at(0...320) : body
+  end
 end
