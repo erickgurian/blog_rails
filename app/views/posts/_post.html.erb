@@ -20,5 +20,14 @@
     </pre>
     <br>
     <p>Por: <%= post.user.email %></p>
+    <p>Categorias:
+      <% if post.categories.any? %>
+        <% post.categories.each do |category| %>
+          <p class="card" style="width: 7rem; padding: 5px;"><%= category.name %>
+        <% end %>
+      <% else %>
+        <p>Nenhuma categoria selecionada</p>
+      <% end %>
+    </p>
   </div>
 </div>

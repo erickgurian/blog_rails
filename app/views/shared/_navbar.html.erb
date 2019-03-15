@@ -5,8 +5,21 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link">Categorias</a>
+      <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorias
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <% @categories = Category.all %>
+              <% if @categories.any? %>
+                <% @categories.each do |category| %>
+                  <%= link_to category.name, category, class: 'dropdown-item' %>
+                  <br>
+                <% end %>
+              <% else %>
+              <a class="dropdown-item" href="#">Não há categorias</a>
+              <% end %>
+            </div>
       </li>
       <li class="nav-item active">
         <a class="nav-link">Autor</a>
@@ -31,6 +44,6 @@
         <%= f.text_field :search, class: 'form-control mx-sm-2' %>
         <%= f.submit 'Buscar', class: 'btn btn-outline-dark my-2 my-sm-0' %>
       <% end %>
-  </div>
+    </div>
   </div>
 </nav>

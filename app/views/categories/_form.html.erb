@@ -1,0 +1,15 @@
+<br>
+<% @category.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
+
+<%= form_with model: category, local: true do |f| %>
+<fieldset>
+ <div class="ls-label col-md-8">
+  <%= f.label :name, class: "ls-label-text" %>
+  <%= f.text_field :name, class: 'form-control col-md-10' %>
+</div>
+  <div class="ls-actions-btn">
+  <%= f.submit botao, class: 'ls-btn ls-btn-lg' %>
+</div>
+<% end %>

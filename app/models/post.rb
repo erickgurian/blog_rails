@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :categories_posts, dependent: :destroy
+  has_many :categories, through: :categories_posts
   validates :title, :body, presence: true
 
   def formated_data

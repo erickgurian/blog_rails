@@ -13,6 +13,16 @@
   <%= f.label :body, class: "ls-label-text" %>
   <%= f.text_area :body, rows: "20", class: "ls-textarea-autoresize" %>
 </div>
+<div class="ls-label col-md-8">
+  <% if !categories.nil? %>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |b| %>
+   <div class="collection-check-box">
+     <%= b.check_box %>
+     <%= b.label %>
+   </div>
+ <% end %>
+  <% end %>
+</div>
   <div class="ls-actions-btn">
   <%= f.submit botao, class: 'ls-btn ls-btn-lg' %>
 </div>

@@ -2,4 +2,5 @@
 <h1>Nova Postagem</h1>
 <br>
 
-<%= render partial: 'form', locals: { post: @post, botao: t('post.new.submit') } %>
+<%= render partial: 'form', locals: { post: @post, categories: @categories,
+                                      botao: t('post.new.submit') } %>

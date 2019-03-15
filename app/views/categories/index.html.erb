@@ -1,0 +1,24 @@
+<br>
+<div class="ls-box">
+  <% if @categories.any? %>
+  <h4>Categorias</h4>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Infos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @categories.each do |category| %>
+          <tr>
+            <td><%= category.name %></td>
+            <td><%= link_to 'Detalhes', category, class: 'ls-btn' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+  <p>Você não possui categorias</p>
+  <% end %>
+</div>

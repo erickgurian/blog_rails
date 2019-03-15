@@ -1,0 +1,29 @@
+<br>
+<br>
+<div class="card" style="width: 40rem;">
+    <% if user_signed_in? && post.author?(current_user) %>
+    <div class="card-header">
+      <p style="margin-left: 470px; text-decoration: none;"><%= link_to 'Editar', edit_post_path(post) %>
+      <i class="fas fa-edit"></i>
+      <%= link_to 'Apagar', post_path(post), method: :delete,
+              data: { confirm: 'Tem certeza?' } %>
+      <i class="fas fa-times-circle"></i></p>
+      </div>
+    <% end %>
+  <div class="card-body">
+    <h4 class="card-title"><b><%= link_to post.title, post %></b></h4>
+    <br>
+    <h6 class="card-subtitle mb-2 text-muted">Por: <strong><%=post.user.email%></strong>, em <%= post.formated_data %></h6>
+    <br>
+    <% if post.read_more? %>
+    <pre>
+      <p class="card-text" style="font-size: 16px;"><%= post.initial_body %>...</p>
+    </pre>
+      <p style="font-size: 18px; color: #000;"><%= link_to 'Ler mais', post_path(post) %></p>
+    <% else %>
+      <pre>
+        <p class="card-text" style="font-size: 16px;"><%= post.body %></p>
+      </pre>
+    <% end %>
+  </div>
+</div>

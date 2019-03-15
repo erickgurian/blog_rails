@@ -1,0 +1,10 @@
+<br>
+<h3><strong><%= @category.name %></h3></strong>
+<br>
+<% if @category.posts.any? %>
+  <% @category.posts.each do |post| %>
+    <%= render partial: 'post', locals: { post: post } %>
+  <% end %>
+<% else %>
+  <h3>Não há postagens nessa categoria</h3>
+<% end %>

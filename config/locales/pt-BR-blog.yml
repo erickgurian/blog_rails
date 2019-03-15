@@ -11,6 +11,8 @@ pt-BR:
       post:
         title: 'Título'
         body: 'Postagem'
+      category:
+        name: 'Nome'
   user:
     session:
       submit: 'Entrar'
@@ -21,3 +23,10 @@ pt-BR:
     edit:
       submit: 'Editar'
       success: 'Postagem editada com sucesso!'
+  category:
+    new:
+      submit: 'Criar'
+      success: 'Categoria criada com sucesso!'
+    edit:
+      submit: 'Editar'
+      success: 'Categoria editada com sucesso!'

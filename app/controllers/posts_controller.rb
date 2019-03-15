@@ -5,17 +5,21 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @categories = Category.all
   end
 
   def show; end
 
   def new
     @post = Post.new
+    @categories = Category.all
     render layout: 'panel'
   end
 
   def create
     @post = current_user.posts.new(post_params)
+    @category = Category.where(id: params[:category_ids])
+    add_category(@post, @category)
     if @post.save
       redirect_to @post, notice: t('post.new.success')
     else
@@ -24,10 +28,13 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
     render layout: 'panel'
   end
 
   def update
+    @category = Category.where(id: params[:category_ids])
+    add_category(@post, @category)
     if @post.update(post_params)
       redirect_to @post, notice: t('post.edit.success')
     else
@@ -47,12 +54,20 @@ class PostsController < ApplicationController
 
   private
 
+  def add_category(post, categories)
+    return unless categories.none? && categories.nil?
+
+    categories.each do |category|
+      post.categories << category
+    end
+  end
+
   def set_post
     @post = Post.find(params[:id])
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :user_id)
+    params.require(:post).permit(:title, :body, :user_id, category_ids: [])
   end
 
   def check_user
