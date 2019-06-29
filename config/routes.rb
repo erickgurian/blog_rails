@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :users, only: %i[index]
-  resources :categories, only: %i[index show new create]
+  resources :categories, only: %i[index show new create edit update]
 
   get :search, to: 'posts#search'
 end

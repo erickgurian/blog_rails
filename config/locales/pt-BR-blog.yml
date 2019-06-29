@@ -30,3 +30,6 @@ pt-BR:
     edit:
       submit: 'Editar'
       success: 'Categoria editada com sucesso!'
+    error:
+      messages:
+        already_exists: 'Este nome já existe'    

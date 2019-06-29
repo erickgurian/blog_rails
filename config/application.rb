@@ -29,10 +29,10 @@ module Blog
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    I18n.available_locales = [:'pt-BR']
+    I18n.available_locales = ['pt-BR']
 
     # Set default locale
-    I18n.default_locale = :'pt-BR'
+    I18n.default_locale = 'pt-BR'
 
     config.time_zone = "America/Sao_Paulo"
   end
