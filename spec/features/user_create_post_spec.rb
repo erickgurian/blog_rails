@@ -13,7 +13,7 @@ feature 'User create a post' do
     fill_in 'Postagem', with: 'Descrição da primeira postagem'
     check category.name
     click_on 'Postar'
-
+    
     expect(page).to have_content('Post criado com sucesso!')
     expect(page).to have_content('Meu primeiro post')
     expect(page).to have_content('Descrição da primeira postagem')

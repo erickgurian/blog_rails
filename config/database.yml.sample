@@ -1,16 +1,19 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: true
   pool: 10
-  username: root
-  password: pass
-  host: db_dev
+  username: postgres
+  password: 
+  host: db
 
 development:
   <<: *default
-  database: locamail_dev
+  database: blog_rails_development
 
 test:
   <<: *default
-  database: locamail_test
+  database: blog_rails_test
+
+production:
+  <<: *default
