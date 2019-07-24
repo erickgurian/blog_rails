@@ -30,7 +30,7 @@ feature 'User deletes a post' do
     post = create(:post, user: author)
     login_as user
 
-    page.driver.submit :delete, '/posts/1', {}
+    page.driver.submit :delete, "/posts/#{post.id}", {}
 
     expect(current_path).to eq root_path
     expect(page).to have_content(post.title)
@@ -49,7 +49,7 @@ feature 'User deletes a post' do
     user = create(:user)
     post = create(:post, user: user)
 
-    page.driver.submit :delete, '/posts/1', {}
+    page.driver.submit :delete, "/posts/#{post.id}", {}
 
     expect(current_path).to eq root_path
     expect(page).to have_content(post.title)

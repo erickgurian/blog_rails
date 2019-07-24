@@ -14,7 +14,6 @@ feature 'User create a post' do
     check category.name
     click_on 'Postar'
 
-    expect(current_path).to eq post_path(1)
     expect(page).to have_content('Post criado com sucesso!')
     expect(page).to have_content('Meu primeiro post')
     expect(page).to have_content('Descrição da primeira postagem')
@@ -64,7 +63,6 @@ feature 'User create a post' do
     check 'Web'
     click_on 'Postar'
 
-    expect(current_path).to eq post_path(1)
     expect(page).to have_content('Post criado com sucesso!')
     expect(page).to have_content('Meu primeiro post')
     expect(page).to have_content('Descrição da primeira postagem')

@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  pool: 10
+  username: root
+  password: pass
+  host: db_dev
+
+development:
+  <<: *default
+  database: locamail_dev
+
+test:
+  <<: *default
+  database: locamail_test
