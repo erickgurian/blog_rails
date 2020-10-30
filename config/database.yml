@@ -4,7 +4,7 @@ default: &default
   reconnect: true
   pool: 10
   username: postgres
-  password: 
+  password: postgres
   host: db
 
 development:
